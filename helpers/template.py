@@ -216,6 +216,7 @@ class Template:
             'UWSGI_HARAKIRI': dict_['uwsgi_harakiri'],
             'UWSGI_WORKER_RELOAD_MERCY': dict_[
                 'uwsgi_worker_reload_mercy'],
+            'SSRF_ON':dict_['ssrf_on'],
             'UWSGI_PASS_TIMEOUT': int(dict_['uwsgi_harakiri']) + 10,
             'POSTGRES_REPLICATION_PASSWORD': dict_[
                 'postgres_replication_password'],

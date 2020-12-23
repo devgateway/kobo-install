@@ -428,6 +428,7 @@ class Config(metaclass=Singleton):
             'uwsgi_worker_reload_mercy': '120',
             'uwsgi_workers_max': '2',
             'uwsgi_workers_start': '1',
+            'ssrf_on': True,
         }
         # Keep properties sorted alphabetically
 
@@ -1120,6 +1121,10 @@ class Config(metaclass=Singleton):
                             'Locally',
                         ]
                     )
+                self.__dict['ssrf_on'] = CLI.yes_no_question(
+                    'Keep SSRF protection ON (only public IP allowed for REST Service, set it off for local instance)?',
+                    default=self.__dict['ssrf_on']
+                )
             else:
                 # Force reset paths
                 self.__reset(dev=True, reset_nginx_port=self.staging_mode)
@@ -2026,6 +2031,7 @@ class Config(metaclass=Singleton):
             self.__dict['kc_path'] = ''
             self.__dict['kpi_path'] = ''
             self.__dict['debug'] = False
+            self.__dict['ssrf_on'] = True
             if reset_nginx_port:
                 self.__dict[
                     'exposed_nginx_docker_port'] = Config.DEFAULT_NGINX_PORT
