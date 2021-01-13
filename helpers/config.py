@@ -689,7 +689,7 @@ class Config(metaclass=Singleton):
             if not os.path.isdir(os.path.join(full_repo_path, '.git')):
                 git_command = [
                     'git', 'clone',
-                    'https://github.com/kobotoolbox/{}'.format(repo_name),
+                    'https://github.com/devgateway/{}'.format(repo_name),
                     full_repo_path
                 ]
 
