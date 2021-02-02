@@ -134,11 +134,13 @@ class Setup:
                            + tmp_host[end_position + len(end_sentence) + 1:]
 
             routes = '{ip_address}  ' \
+                     '{vt_subdomain}.{public_domain_name} ' \
                      '{kpi_subdomain}.{public_domain_name} ' \
                      '{kc_subdomain}.{public_domain_name} ' \
                      '{ee_subdomain}.{public_domain_name}'.format(
                         ip_address=dict_['local_interface_ip'],
                         public_domain_name=dict_['public_domain_name'],
+                        vt_subdomain=dict_['vt_subdomain'],
                         kpi_subdomain=dict_['kpi_subdomain'],
                         kc_subdomain=dict_['kc_subdomain'],
                         ee_subdomain=dict_['ee_subdomain']

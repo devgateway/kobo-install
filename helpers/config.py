@@ -428,6 +428,7 @@ class Config(metaclass=Singleton):
             'uwsgi_worker_reload_mercy': '120',
             'uwsgi_workers_max': '2',
             'uwsgi_workers_start': '1',
+            'vt_subdomain': 'vt',
         }
         # Keep properties sorted alphabetically
 
@@ -1664,6 +1665,12 @@ class Config(metaclass=Singleton):
             CLI.COLOR_QUESTION,
             self.__dict['ee_subdomain']
         )
+        if self.local_install:
+            self.__dict['vt_subdomain'] = CLI.colored_input(
+                'Validation Tool sub domain name?',
+                CLI.COLOR_QUESTION,
+                self.__dict['vt_subdomain']
+            )
 
         parts = self.__dict['public_domain_name'].split('.')
         self.__dict['internal_domain_name'] = '{}.internal'.format(
