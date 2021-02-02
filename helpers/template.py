@@ -169,6 +169,7 @@ class Template:
             'KOBOFORM_SUBDOMAIN': dict_['kpi_subdomain'],
             'KOBOCAT_SUBDOMAIN': dict_['kc_subdomain'],
             'ENKETO_SUBDOMAIN': dict_['ee_subdomain'],
+            'VALIDATION_TOOL_SUBDOMAIN': dict_['vt_subdomain'],
             'KOBO_SUPERUSER_USERNAME': dict_['super_user_username'],
             'KOBO_SUPERUSER_PASSWORD': dict_['super_user_password'],
             'ENKETO_API_KEY': dict_['enketo_api_token'],
