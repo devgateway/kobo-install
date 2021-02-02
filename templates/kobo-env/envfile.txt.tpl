@@ -9,6 +9,10 @@ PUBLIC_DOMAIN_NAME=${PUBLIC_DOMAIN_NAME}
 # The private domain used in docker network. Useful for communication between containers without passing through
 # a load balancer. No need to be resolved by a public DNS.
 INTERNAL_DOMAIN_NAME=${INTERNAL_DOMAIN_NAME}
+# The publicly-accessible subdomain for the Validation Tool.
+VALIDATION_TOOL_PUBLIC_SUBDOMAIN=${VALIDATION_TOOL_SUBDOMAIN}
+# Local interface IP.
+LOCAL_INTERFACE_IP=${LOCAL_INTERFACE_IP}
 # The publicly-accessible subdomain for the KoBoForm form building and management interface (e.g. koboform).
 KOBOFORM_PUBLIC_SUBDOMAIN=${KOBOFORM_SUBDOMAIN}
 # The publicly-accessible subdomain for the KoBoCAT data collection and project management interface (e.g.kobocat).
