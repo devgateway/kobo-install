@@ -12,7 +12,9 @@
     "offline enabled": true,
     "encryption key": "${ENKETO_ENCRYPTION_KEY}",
     "less secure encryption key": "${ENKETO_LESS_SECURE_ENCRYPTION_KEY}",
-    "support": "${DEFAULT_FROM_EMAIL}",
+    "support": {
+        "email": "${DEFAULT_FROM_EMAIL}"
+    },
     "widgets": [
         "note",
         "select-desktop",
